@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root{
+    --Orange: hsl(25, 97%, 53%);
+
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 12%, 54%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    background-color: var(--Very-Dark-Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.thankyouCard{
+    padding: 2em!important;
+    padding-bottom: 2.4em!important;
+    align-items: center!important;
+    text-align: center;
+}
+
+.thankyouCard .containerStar{
+    border-radius: 2em!important;
+}
+
+.thankyouCard .containerStar .cardStar{
+    padding: 0.4em 0.8em!important;
+    border-radius: 2em;
+    color: var(--Orange);
+}
+
+.bodyCard{
+    width: 340px;
+    margin: 1.2em;
+    padding: 1.2em;
+    padding-bottom: 2em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5em;
+    background-color: var(--Dark-Blue);
+}
+
+.bodyCard .containerStar{
+    border-radius: 50%;
+    background-color: var(--Medium-Grey);
+}
+
+.bodyCard .cardStar{
+    padding: 1.5em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: brightness(42%);
+}
+
+.bodyCard .cardStar img{
+    position: absolute;
+}
+
+.bodyCard .cardHeader{
+    color: var(--White);
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.bodyCard .cardInfo{
+    color: var(--Light-Grey);
+    line-height: 22px;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+li{
+    list-style: none;
+}
+
+button{
+    border: 0;
+    text-decoration: none;
+}
+.bodyCard .cardRating{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Este es mi contenedor */
+.bodyCard .cardRating .ratingNum{
+    padding: 1.5em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Medium-Grey);
+    cursor: pointer;
+
+}
+
+/* Este es el filtro */
+.bodyCard .cardRating .ratingNum div{
+    position: absolute;
+    padding: 1.5em;
+    border-radius: 50%;
+    backdrop-filter: brightness(42%);
+}
+
+.bodyCard .cardRating .ratingNum:hover > div{
+    display: none;
+}
+/* Este es el contenido */
+.bodyCard .cardRating .ratingNum p{
+    position: absolute;
+    color: var(--Light-Grey);
+    font-weight: 700;
+}
+
+.bodyCard .cardRating .ratingNum:hover > p{
+    color: var(--White);
+}
+
+.bodyCard .cardRating .activateState{
+    background-color: var(--Orange);
+    cursor: default;
+}
+
+.bodyCard .cardRating .activateState div{
+    display: none;
+
+}
+
+.bodyCard .cardRating .activateState p{
+    color: var(--White);
+}
+
+
+.bodyCard .submit{
+    width: 100%;
+    padding: 1.5em;
+    border-radius: 2em;
+    background-color: var(--Orange);
+    color: var(--White);
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.bodyCard .submit:active{
+    background-color: var(--White);
+    color: var(--Orange);    
+}
+
+@media (min-width: 700px) {
+    .bodyCard{
+        width: 400px;
+        padding: 2em;
+    }
+    .cardRating{
+        margin: 0.3em 0em;
+    }
+
+    .ratingNum{
+        padding: 1.7em!important;
+    }
+
+    .ratingNum div{
+        padding: 1.7em!important;
+    }
+
+    .thankyouCard .containerStar .cardStar{
+        /* padding: 0.5em!important; */
+        padding: 0.4em 1.6em!important;
+
+    }
+}
